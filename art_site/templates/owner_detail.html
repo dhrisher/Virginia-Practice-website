@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block body_block %}
+{% load static %}
+
+
+<link rel="stylesheet" href="{% static "css/home.css" %}">
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+  <div class="jumbotron" id = 'home'>
+
+
+    <h1>Owner Details</h1>
+    <p>Name: {{owner_detail.name}}</p>
+    <p>Age: {{owner_detail.age}}</p>
+    <p>Nationality: {{owner_detail.nationality}}</p>
+
+    <h3>Works owned:</h3>
+    {% for piece in owner_detail.art.all %}
+    <p><a href="{% url 'first_app:artwork_detail' piece.id %}">{{piece.name}}</a></p>
+
+
+    {% endfor %}
+
+  </div>
+
+  </body>
+</html>
+
+
+{% endblock %}

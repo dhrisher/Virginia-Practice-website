@@ -1,0 +1,35 @@
+a{
+  color: black;
+  font-family: 'Open Sans', sans-serif;
+}
+
+a:hover{
+  color : brown;
+}
+
+h2{
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+}
+
+img{
+ box-shadow: 2.5px 2.5px 2.5px grey;
+}
+
+#navbar{
+ padding-top: 20px;
+ padding-bottom: 50px;
+ padding-left: 30px;
+ background: -webkit-linear-gradient(bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 15%, rgba(255,255,255,1) 100%);
+}
+
+#navbuttons{
+  padding-top: 40px;
+}
+
+.navbar {
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+
+}

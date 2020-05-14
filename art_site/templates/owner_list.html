@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+{% extends "base.html" %}
+{% block body_block %}
+{% load static %}
+
+
+<link rel="stylesheet" href="{% static "css/home.css" %}">
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+
+<div class="container" id = 'home'>
+
+<h1>Previous Buyers</h1>
+
+<ol>
+  {% for owner in owner_list %}
+  <h2><li><a href="{{owner.id}}">{{owner.name}}</a></li></h2>
+  {% endfor %}
+</ol>
+
+</div>
+  </body>
+</html>
+
+{% endblock %}

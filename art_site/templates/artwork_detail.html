@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block body_block %}
+{% load static %}
+
+
+<link rel="stylesheet" href="{% static "css/home.css" %}">
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+  <div class="jumbotron" id = 'home'>
+
+
+    <h1>Artwork Details</h1>
+    <p>Name: {{artwork_detail.name}}</p>
+    <p><a href="{% url 'first_app:owners' %}">Owner: {{artwork_detail.owner}}</a></p>
+    <p>Medium: {{artwork_detail.medium}}</p>
+    <p>Year Painted: {{artwork_detail.year_painted}}</p>
+    <p>owner id:  {{owner_detail.name}}</p>
+
+
+  </div>
+
+  </body>
+</html>
+
+
+{% endblock %}

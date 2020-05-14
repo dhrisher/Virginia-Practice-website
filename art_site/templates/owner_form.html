@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+
+<title>Contact</title>
+
+{% extends "base.html" %}
+  {% block body_block %}
+    {% load static %}
+
+
+<!DOCTYPE html>
+
+<link rel="stylesheet" href="{% static "css/contact.css" %}">
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="form-top">
+      <h1>{% if not form.instance.pk %}
+        Create Owner
+        {% else %}
+        Update School
+        {% endif %}
+      </h1>
+
+      <form method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+
+        <input type="submit" class='btn btn-primary' name="" value="Submit">
+      </form>
+
+  </body>
+</html>
+
+
+
+
+
+
+
+  {% endblock %}
